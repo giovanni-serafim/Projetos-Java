@@ -4,4 +4,6 @@
 
 *Encapsulamento*: Sistema simples de banco para estudar principios de encapsulamento e métodos acessores.
 
+* herança *: codigo usando usando tipos de vegetação  para estudar sobre herança.
+
 *sobrecarga*: código usando formas geométricas para estudar sobrecarga.
