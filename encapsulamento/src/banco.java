@@ -10,9 +10,9 @@
 public class banco {
     public static void main(String[] args) {
         conta cc = new conta("marcelo", 1000, 1234);
-        cc.exibirDados();
-        cc.realizarSaque();
-        cc.exibirDados();
+        cc.verificarSaldo();
+        cc.trocarSenha();
+        cc.verificarSaldo();
 
     }
     

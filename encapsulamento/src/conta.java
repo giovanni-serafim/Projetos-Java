@@ -38,7 +38,6 @@ public class conta {
         
         //verifica se a senha está certa
         if (!verificarSenha(pwd)){ //o "!" é negação, então ele vai rodar se o verificar senha retornar False
-            JOptionPane.showMessageDialog(null, "senha incorreta");
             if(!isBloqueado())
                realizarSaque();
         }
@@ -56,6 +55,37 @@ public class conta {
         }
     }
     
+    public void realizarDeposito(){
+       float depo;
+       JOptionPane.showInputDialog("para quem é esse depósito?");
+       depo = Float.parseFloat(JOptionPane.showInputDialog("qual valor?"));
+       setSaldo(getSaldo()+depo);
+    }
+    
+    public void verificarSaldo(){
+        int pwd = Integer.parseInt(JOptionPane.showInputDialog("informe sua senha: "));
+        if(!verificarSenha(pwd)){
+            if (!isBloqueado())
+                verificarSaldo();
+        }
+        else{
+            JOptionPane.showMessageDialog(null, "seu saldo atual é de: " + getSaldo());
+        } 
+    }//fim do método
+    
+    public void trocarSenha(){
+        int pwd = Integer.parseInt(JOptionPane.showInputDialog("informe sua senha: "));
+        if(!verificarSenha(pwd)){
+            if (!isBloqueado())
+                trocarSenha();
+        }
+        else{
+            pwd = Integer.parseInt(JOptionPane.showInputDialog("informe sua nova senha: "));
+            setSenha(pwd);
+        } 
+
+    }
+    
     //método para verificar tentativas de senha
     private boolean verificarSenha(int pwd){
         
@@ -64,11 +94,13 @@ public class conta {
         return true;
     else
         if(tentativas>=2){
+            tentativas++;
             JOptionPane.showMessageDialog(null, "bloqueado");
             setBloqueado(true);}
             
         else
             tentativas++;
+            JOptionPane.showMessageDialog(null, "senha incorreta. você tem " + (3 - tentativas) + " tentativas restantes");
     return(false);
             
     }
