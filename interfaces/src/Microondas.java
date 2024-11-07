@@ -36,6 +36,8 @@ public class Microondas implements Eletrodomestico{
         desligar();
     }
     
+
+    
    
     
     

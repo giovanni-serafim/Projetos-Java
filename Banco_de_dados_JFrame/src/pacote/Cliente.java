@@ -1,3 +1,5 @@
+package pacote;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -84,6 +86,7 @@ public class Cliente extends javax.swing.JFrame {
 
         jLabel3.setText("telefone");
 
+        jTextField1.setText("ivanildo");
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1ActionPerformed(evt);
@@ -136,6 +139,11 @@ public class Cliente extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        jTable1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTable1MouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(jTable1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -281,6 +289,10 @@ public class Cliente extends javax.swing.JFrame {
         // Caso o valor inserido não seja um número, exibe uma mensagem de erro
         JOptionPane.showMessageDialog(this, "ID inválido! Por favor, insira um número válido.");      // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
+            // TODO add your handling code here:
+    }//GEN-LAST:event_jTable1MouseClicked
     }
     /**
      * @param args the command line arguments
