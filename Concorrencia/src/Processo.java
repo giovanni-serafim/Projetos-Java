@@ -36,7 +36,7 @@ public class Processo extends Thread{
         janela.setLocation(x, y);
         painel.setBackground(Color.getHSBColor(h, g, b));
         janela.add(painel);
-        janela.add(label);
+        //janela.add(label);
         janela.setVisible(true);
     }
     
