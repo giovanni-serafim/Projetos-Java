@@ -1,15 +1,16 @@
-import utilitarios.Conexao;
-import java.sql.Connection;
-import java.sql. PreparedStatement;
-import java.sql.ResultSet;
+package view;
+
+import controller. ClienteController;
+import java.util.List;
 import javax.swing. JOptionPane;
-import javax.swing. table. DefaultTableModel;
+import javax.swing.table.DefaultTableModel;
+import model.Cliente;
 
-public class Cliente extends javax.swing.JFrame {
+public class ClienteView extends javax.swing.JFrame {
 
     
     
-    public Cliente() {
+    public ClienteView() {
         initComponents();
     }
     
